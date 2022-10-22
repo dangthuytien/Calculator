@@ -20,11 +20,14 @@ namespace Calculator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int soA, soB, tong = 0;
-            soA=int.Parse(txtSoA.Text);
-            soB = int.Parse(txtSoB.Text);
-            tong = soA + soB;
-            txtKetQua.Text = tong.ToString();
+            if (txtSoA.Text != String.Empty)
+            {
+                int soA, soB, tong = 0;
+                soA = int.Parse(txtSoA.Text);
+                soB = int.Parse(txtSoB.Text);
+                tong = soA + soB;
+                txtKetQua.Text = tong.ToString(); 
+            }
         }
 
         private void btTru_Click(object sender, EventArgs e)
