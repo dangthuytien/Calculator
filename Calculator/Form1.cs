@@ -20,7 +20,9 @@ namespace Calculator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtSoA.Text != String.Empty)
+
+            if (txtSoA.Text != String.Empty && txtSoB.Text != String.Empty)
+
             {
                 int soA, soB, tong = 0;
                 soA = int.Parse(txtSoA.Text);
