@@ -35,7 +35,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btNhan = new System.Windows.Forms.Button();
             this.btTru = new System.Windows.Forms.Button();
+            this.btChia = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btCong
@@ -45,9 +47,9 @@
             this.btCong.Name = "btCong";
             this.btCong.Size = new System.Drawing.Size(114, 48);
             this.btCong.TabIndex = 9;
-            this.btCong.Text = "Cộng";
+            this.btCong.Text = "+";
             this.btCong.UseVisualStyleBackColor = true;
-            this.btCong.Click += new System.EventHandler(this.button1_Click);
+            this.btCong.Click += new System.EventHandler(this.btCong_Click);
             // 
             // txtKetQua
             // 
@@ -103,22 +105,46 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Số A";
             // 
+            // btNhan
+            // 
+            this.btNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNhan.Location = new System.Drawing.Point(476, 310);
+            this.btNhan.Name = "btNhan";
+            this.btNhan.Size = new System.Drawing.Size(114, 48);
+            this.btNhan.TabIndex = 9;
+            this.btNhan.Text = "*";
+            this.btNhan.UseVisualStyleBackColor = true;
+            this.btNhan.Click += new System.EventHandler(this.btNhan_Click);
+            // 
             // btTru
             // 
             this.btTru.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTru.Location = new System.Drawing.Point(573, 310);
+            this.btTru.Location = new System.Drawing.Point(327, 310);
             this.btTru.Name = "btTru";
             this.btTru.Size = new System.Drawing.Size(114, 48);
             this.btTru.TabIndex = 9;
-            this.btTru.Text = "Trừ";
+            this.btTru.Text = "-";
             this.btTru.UseVisualStyleBackColor = true;
             this.btTru.Click += new System.EventHandler(this.btTru_Click);
+            // 
+            // btChia
+            // 
+            this.btChia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btChia.Location = new System.Drawing.Point(623, 310);
+            this.btChia.Name = "btChia";
+            this.btChia.Size = new System.Drawing.Size(114, 48);
+            this.btChia.TabIndex = 9;
+            this.btChia.Text = "/";
+            this.btChia.UseVisualStyleBackColor = true;
+            this.btChia.Click += new System.EventHandler(this.btChia_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btChia);
+            this.Controls.Add(this.btNhan);
             this.Controls.Add(this.btTru);
             this.Controls.Add(this.btCong);
             this.Controls.Add(this.txtKetQua);
@@ -143,7 +169,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btNhan;
         private System.Windows.Forms.Button btTru;
+        private System.Windows.Forms.Button btChia;
     }
 }
 

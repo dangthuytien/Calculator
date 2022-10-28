@@ -17,27 +17,36 @@ namespace Calculator
             InitializeComponent();
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btCong_Click(object sender, EventArgs e)
         {
-
-            if (txtSoA.Text != String.Empty && txtSoB.Text != String.Empty)
-
-            {
-                int soA, soB, tong = 0;
-                soA = int.Parse(txtSoA.Text);
-                soB = int.Parse(txtSoB.Text);
-                tong = soA + soB;
-                txtKetQua.Text = tong.ToString(); 
-            }
+            int a = int.Parse(txtSoA.Text);
+            int b = int.Parse(txtSoB.Text);
+            Calculation c = new Calculator.Calculation(a, b);
+            txtKetQua.Text = c.Execute("+").ToString();
         }
 
         private void btTru_Click(object sender, EventArgs e)
         {
-            double a = double.Parse(txtSoA.Text);
-            double b = double.Parse(txtSoB.Text);
-            double c = a - b;
-            txtKetQua.Text = c.ToString();
+            int a = int.Parse(txtSoA.Text);
+            int b = int.Parse(txtSoB.Text);
+            Calculation c = new Calculator.Calculation(a, b);
+            txtKetQua.Text = c.Execute("-").ToString();
+        }
+
+        private void btNhan_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(txtSoA.Text);
+            int b = int.Parse(txtSoB.Text);
+            Calculation c = new Calculator.Calculation(a, b);
+            txtKetQua.Text = c.Execute("*").ToString();
+        }
+
+        private void btChia_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(txtSoA.Text);
+            int b = int.Parse(txtSoB.Text);
+            Calculation c = new Calculator.Calculation(a, b);
+            txtKetQua.Text = c.Execute("/").ToString();
         }
     }
 }
